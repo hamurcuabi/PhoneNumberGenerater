@@ -28,6 +28,8 @@ namespace PhoneNumberGenerater
 
         private void btnGenerate_Click(object sender, EventArgs e)
         {
+
+            //Add
             List<String> list = NumberGenerator.Generate(txtStarts.Text, txtThreeDigit.Text, numbersTableAdapter1);
 
 
