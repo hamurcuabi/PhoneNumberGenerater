@@ -1,5 +1,4 @@
-﻿using CefSharp;
-using CefSharp.WinForms;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,34 +8,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Twilio;
-using Twilio.Rest.Api.V2010.Account;
-using Twilio.Types;
+
 
 namespace PhoneNumberGenerater
 {
     public partial class Form1 : Form
     {
 
- 
+        private List<String> list1, list2, listFinal;
+
         public Form1()
         {
             InitializeComponent();
-          
-           
+            CheckForIllegalCrossThreadCalls = false;
+
+
         }
 
         private void btnGenerate_Click(object sender, EventArgs e)
         {
-
-            //Add
-            List<String> list = NumberGenerator.Generate(txtStarts.Text, txtThreeDigit.Text, numbersTableAdapter1);
-
-
+            DateTime start = DateTime.Now;
+            list1 = NumberGenerator.Generate(list1);
+            list1 = NumberGenerator.Generate2(list1);
+            list1 = NumberGenerator.Generate2(list1);
+            list1 = NumberGenerator.Generate2(list1);
+            list1 = NumberGenerator.Generate2(list1);
+            NumberGenerator.GeneratePost(list1, txtStarts.Text, numbersTableAdapter1, lblCount);
         }
 
-    
 
-        
+
+
     }
 }

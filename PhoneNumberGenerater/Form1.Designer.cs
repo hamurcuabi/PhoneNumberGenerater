@@ -31,10 +31,9 @@
             this.txtStarts = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnGenerate = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtThreeDigit = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.numbersTableAdapter1 = new PhoneNumberGenerater.PhoneNumberDbTableAdapters.NumbersTableAdapter();
+            this.lblCount = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,6 +43,7 @@
             this.txtStarts.Name = "txtStarts";
             this.txtStarts.Size = new System.Drawing.Size(120, 22);
             this.txtStarts.TabIndex = 1;
+            this.txtStarts.Text = "+905310";
             // 
             // label1
             // 
@@ -56,40 +56,23 @@
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(6, 187);
+            this.btnGenerate.Location = new System.Drawing.Point(6, 140);
             this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(200, 73);
+            this.btnGenerate.Size = new System.Drawing.Size(200, 43);
             this.btnGenerate.TabIndex = 5;
             this.btnGenerate.Text = "Generate";
             this.btnGenerate.UseVisualStyleBackColor = true;
             this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 100);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 17);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Three Digit:";
-            // 
-            // txtThreeDigit
-            // 
-            this.txtThreeDigit.Location = new System.Drawing.Point(86, 97);
-            this.txtThreeDigit.Name = "txtThreeDigit";
-            this.txtThreeDigit.Size = new System.Drawing.Size(120, 22);
-            this.txtThreeDigit.TabIndex = 6;
-            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblCount);
             this.groupBox1.Controls.Add(this.btnGenerate);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtStarts);
-            this.groupBox1.Controls.Add(this.txtThreeDigit);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(217, 266);
+            this.groupBox1.Size = new System.Drawing.Size(217, 189);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Generate Number";
@@ -98,11 +81,20 @@
             // 
             this.numbersTableAdapter1.ClearBeforeFill = true;
             // 
+            // lblCount
+            // 
+            this.lblCount.AutoSize = true;
+            this.lblCount.Location = new System.Drawing.Point(66, 109);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(16, 17);
+            this.lblCount.TabIndex = 6;
+            this.lblCount.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(233, 281);
+            this.ClientSize = new System.Drawing.Size(239, 212);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -117,10 +109,9 @@
         private System.Windows.Forms.TextBox txtStarts;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGenerate;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtThreeDigit;
         private PhoneNumberDbTableAdapters.NumbersTableAdapter numbersTableAdapter1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblCount;
     }
 }
 
